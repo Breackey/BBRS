@@ -6,13 +6,203 @@
 {% block content %}
 
 
-<div class="card" style="width: 18rem;">
-    <!-- <img src="{% static 'images/bree.jpg' %}" class="card-img-top" alt="..."> -->
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="{% url 'about' %}" class="btn btn-dark">About</a>
+<!-- <section id="content" style="background-image: url('static/images/bus5.png');  background-size: contain;background-position:center center; background-repeat: no-repeat; width: 100%; height: 400px;"> -->
+  <section id="content" class="slideshow-bg">
+    <div id="slideshow">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <div class="slidebg" style="background-image: url('static/images/bus5.png');  background-size: contain;background-position:center center; background-repeat: no-repeat; width: 100%; height: 400px;"></div>
+                </li>
+            </ul>
+        </div>
     </div>
+  <div class="container">
+    <div id="main">
+        <h1 class="page-title text-center" >Book With Us</h1>
+        
+        <div class="col-md-2">
+          <div class="form-group row">
+              <div class="col-md-12 visible-xs">&nbsp;</div>
+
+      
+              </div>
+              </div>
+
+      <div class="col-md-3">
+          <div class="form-group row">
+      <div class="col-xs-12 col-sm-6 col-md-6 destinations">
+<header id="header" class="navbar-static-top style2 searcharea">
+<div class="main-header">
+    <div class="container">
+        <div class="header-search clearfix searchbus">
+            <form method="GET" role="form" action="https://buupass.com/Booking/search">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                      <select required name="from" class="select_data from_cities">
+                        <option style="color: silver !important;" value="">Leaving From</option>
+                                                                    <option value="Mombasa">Mombasa</option>
+                            </select>
+                          </div>		
+                          <select required name="to" class="destination_cities select_data">
+                            <option value="">Going To</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="datepicker-wrap transparent">
+              <input type="text" name="departure_date" class="input-text white-bg full-width check-in" required placeholder="Departing on" />
+              </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                      <!-- <button  type="button" data-toggle="modal" data-target="#myModal"   class="btn-medium uppercase full-width">search buses</button> -->
+                      <button  type="submit"    class="btn-medium uppercase full-width">search buses</button>
+                  </div>
+              </div>
+              </form>
+              </div>
+              
+              <div class="text-center" style="margin-top: 10px"><img width="300" height="60" alt="" class="text-center" src="https://buupass.com/app/themes/bus/assets/images/pay_via.png"></div>
+              </div>
+              </div>
+              </header>
+              
+              <div class="search-box-wrapper style2" style="display:none;">
+              <div class="search-box">
+              <div class="search-tab-content">
+                  <div class="tab-pane fade active in" id="cars-tab">
+                      <form action="#" method="post">
+                          <div class="row">
+                              <div class="col-md-3">
+                                  <div class="form-group">
+                                      <input type="text" class="input-text full-width" placeholder="Leaving From" />
+                                  </div>
+                              </div>
+                              <div class="col-md-3">
+                                  <div class="form-group">
+                                      <input type="text" class="input-text full-width" placeholder="Going to" />
+                                  </div>
+                              </div>
+                              
+                              <div class="col-md-2">
+                                  <div class="form-group">
+              <div class="datepicker-wrap">
+              <input type="text" class="input-text full-width" placeholder="Departing on" />
+              </div>
+                                  </div>
+                              </div>
+                              
+                              <div class="col-md-2">
+                                  <div class="form-group row">
+                                      <div class="col-xs-6">
+                                          <div class="selector">
+                                              <select class="full-width">
+                                                  <option value="">Adults</option>
+                                                  <option value="1">01</option>
+                                                  <option value="2">02</option>
+                                                  <option value="3">03</option>
+                                                  <option value="4">04</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="col-xs-6">
+                                          <div class="selector">
+                                              <select class="full-width">
+                                                  <option value="">Kids</option>
+                                                  <option value="1">01</option>
+                                                  <option value="2">02</option>
+                                                  <option value="3">03</option>
+                                                  <option value="4">04</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-2">
+                                  <div class="form-group row">
+                                      <button class="full-width">SEARCH NOW</button>
+                                  </div>
+              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+              </section>
+  
+  
+  
+  
+  
+  
+                      <div class="search-box-wrapper">
+      <div class="search-box container" style="margin-top:0px;"> 
+          <ul class="search-tabs clearfix" style="display:none;">
+              <li><a href="#hotels-tab" data-toggle="tab">Sign up</a></li>
+              <li><a href="#flights-tab" data-toggle="tab">Login</a></li>
+          </ul>                  
+          <div class="search-tab-content">
+              <form action="search-view-results.php" method="post">
+                  <div class="row">
+                      <div class="col-md-12">
+                        <h2 style="color: #fff; font-size:25px;">
+                          Madaraka Express - Online Booking
+                        </h2>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="form-group row">
+                            <div class="col-md-12 visible-xs">&nbsp;</div>
+
+                    
+                            </div>
+                            </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group row">
+                            
+                              <div class="col-md-12 col-xs-12">
+<label style="color:white;">From</label>
+<select class="form-control terminal_id" name="terminal_id"  onchange="fetch_destinations(jQuery(this).val());">
+<option  value='2'>Nairobi Terminus</option><option  value='3'>Mombasa Terminus</option><option  value='4'>Voi</option><option  value='5'>Mtito Andei</option><option  value='6'>Mariakani</option><option  value='7'>Miaseny</option><option  value='9'>Kibwezi</option><option  value='10'>Emali</option><option  value='11'>Athi River</option></select>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-md-3">
+                          <div class="form-group row">
+                              
+                              
+                              <div class="col-md-12 col-xs-12">
+<label style="color:white;">To</label>
+<select class="form-control destination_id" id="destination_references"   name="destination_id">
+<option  value='3'>Mombasa Terminus</option><option  value='4'>Voi</option><option  value='5'>Mtito Andei</option><option  value='11'>Athi River</option><option  value='10'>Emali</option><option  value='9'>Kibwezi</option><option  value='7'>Miaseny</option><option  value='6'>Mariakani</option></select>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-md-2 col-xs-12">
+                          <div class="form-group">
+                              <label style="color:white;">Departure Date</label>
+                              <div class="datepicker-wrap">
+                                  <input type="text" onclick="jQuery('.ui-datepicker-trigger').click();" required="true" class="input-text full-width travel_date" name='travel-date' placeholder="mm/dd/yyyy" value="" />
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="form-group col-md-2">
+                          <label class="hidden-xs">&nbsp;</label>
+                          <button class="full-width" type="submit" style="background:#ff5624;">Book a Train</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
   </div>
+</section>
   <br/>
 {% endblock %}

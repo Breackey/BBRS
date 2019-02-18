@@ -7,13 +7,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
+    
     <title>{% block title %}Hello, world!{% endblock %}</title>
+    <link href="static/css/stylesheet.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <a class="navbar-brand" href="#">BreeBus Reservation System</a>
+                <a class="navbar-brand" href="{% url 'home' %}">BreeBus Reservation System</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -40,11 +41,11 @@
                         </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'ticketdetails' %}">Ticket Details</a>
+                        <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                     </li>
                     
                     <li class="nav-item">
-                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
                     </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
@@ -58,6 +59,65 @@
         {% block content %}
         {% endblock %}
     </div>
+
+    <div class="footer-wrapper">
+      <div class="container">
+          <div class="row">
+              
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 mbt">
+                <h2>About BuuPass</h2>
+                <p>Kenya's #1 marketplace for bus, shuttle, and train bookings. Book anytime, anywhere, from any phone using *877# or www.buupass.com</p>
+
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+               
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+               
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+               
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <h2>Contact us</h2>
+                <address class="contact-details">
+                    <span class="contact-phone"><i class="soap-icon-phone"></i> 
+                    <a href="#" class="contact-email">0715 763 362</a></span>
+                    <br />
+                    <span class="contact-phone"><i class="soap-icon-message"></i> <a href="/cdn-cgi/l/email-protection#a0c9cec6cfe0c2d5d5d0c1d3d38ec3cfcd" class="contact-email"><span class="__cf_email__" data-cfemail="d0b9beb6bf90b2a5a5a0b1a3a3feb3bfbd">[email&#160;protected]</span></a></span>
+                </address>
+               </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="bottom gray-area">
+      <div class="container">
+          <div class="logo pull-left">
+              <a href="https://buupass.com/" title="Buupass">
+                  <img src="https://buupass.com/app/themes/bus/assets/images/footer_logo.png" alt="Buupass logo" />
+              </a>
+          </div>
+          <div class="pull-right hidden-mobile">
+              <a id="back-to-top" href="#" class="animated" data-animation-type="bounce"><i class="soap-icon-longarrow-up circle"></i></a>
+          </div>     
+          <div>     
+                  <ul class="social-icons pull-right mt-15 clearfix">
+                      <li class="twitter"><a title="twitter" href="https://twitter.com/BuuPass" target="_blank" data-toggle="tooltip"><i class="soap-icon-twitter"></i></a></li>
+                      <li class="googleplus"><a title="instagram" href="https://www.instagram.com/buupass/"  target="_blank" data-toggle="tooltip"><i class="soap-icon-instagram"></i></a></li>
+                      <li class="facebook"><a title="facebook" href="https://www.facebook.com/BuuPass/"  target="_blank" data-toggle="tooltip"><i class="soap-icon-facebook"></i></a></li>
+                      <li class="linkedin"><a title="linkedin" href="https://www.linkedin.com/company/buupass"  target="_blank" data-toggle="tooltip"><i class="soap-icon-linkedin"></i></a></li>
+                  </ul>
+                </div>
+          <div class="copyright pull-right">
+              <p>&copy; 2019 Buupass.com</p>
+          </div>
+      </div>
+  </div>
+</footer>
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
