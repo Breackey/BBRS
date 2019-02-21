@@ -5,7 +5,10 @@ h1 {
     margin-bottom: 5px;
     text-decoration: bold;
 }
-
+h2{
+    color: #fff;
+    font-size:25px;
+}
 table {
     margin: 5px;
     width: 290px;
