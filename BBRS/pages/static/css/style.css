@@ -1,4 +1,16 @@
-
+.main-header{
+	position: 100% 100%;
+	/*background-image: url('../images/bus15.jpg');*/
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+   -o-background-size: cover;
+  width: 85em;
+  height:40em;
+  background-size:100%;
+}
 
 .section {
 	position: relative;
@@ -19,7 +31,7 @@
 }
 
 .booking-form {
-	position: relative;
+	position: top left;
 	max-width: 50%;
 	width: 50%;
 	margin: auto;
@@ -118,7 +130,7 @@
 }
 
 .booking-form select.form-control+.select-arrow {
-	position: absolute;
+	position: relative;
 	right: 15px;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
@@ -144,7 +156,7 @@
 }
 
 .booking-form .form-checkbox{
-	color: aliceblue
+	color: #ff8846
 }
 
 .booking-form .form-label {
@@ -174,7 +186,7 @@
 
 .booking-form .submit-btn {
 	color: #fff;
-	background-color: #e35e0a;
+	background-color: rgb(10, 93, 218);
 	font-weight: 700;
 	height: 60px;
 	padding: 10px 30px;
