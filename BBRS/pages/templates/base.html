@@ -8,11 +8,29 @@
         
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="(% static 'style.css' %)" >
-
-    <title>{% block title %}Hello, world!{% endblock %}</title>
     
-
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+ 
+	<!--Custom styles-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'">
+    <title>{% block title %}Hello, world!{% endblock %}</title>
+    <script language="JavaScript" type="text/javascript">
+      function login(showhide){
+      if(showhide == "show"){
+          document.getElementById('popupbox').style.visibility="visible";
+      }else if(showhide == "hide"){
+          document.getElementById('popupbox').style.visibility="hidden"; 
+      }
+      }
+      </script>
+ 
   </head>
   <body>
 
@@ -38,9 +56,7 @@
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{% url 'bookbus' %}">Book Bus</a>
                             <a class="dropdown-item" href="{% url 'ticketdetails' %}">Booking Status</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                          </div>
+                            
                         </li>
 
                     <li class="nav-item">
@@ -51,25 +67,81 @@
                       <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
                     </li>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
-                </div>
+                  
+               </div>
+               
+               
+                
+                    <div id="popupbox"> 
+                        <div class="container">
+                                <div class="d-flex justify-content-center h-100">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h3>Sign In</h3>
+                                            <div class="d-flex justify-content-end social_icon">
+                                                <span><i class="fab fa-facebook-square"></i></span>
+                                                <span><i class="fab fa-google-plus-square"></i></span>
+                                                <span><i class="fab fa-twitter-square"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <form name="login" action="" method="post"> 
+                                                <div class="input-group form-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="username">
+                                                    
+                                                </div>
+                                                <div class="input-group form-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                                    </div>
+                                                    <input type="password" class="form-control" placeholder="password">
+                                                </div>
+                                                <div class="row align-items-center remember">
+                                                    <input type="checkbox">Remember Me
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="submit" value="Login" class="btn float-right login_btn">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="d-flex justify-content-center links">
+                                                Don't have an account?<a href="#">Sign Up</a>
+                                            </div>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="#">Forgot your password?</a>
+                                                <div >
+                                                <center><a href="javascript:login('hide');">close</a></center>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                </div> 
+                
+               
+                <p>Not yet signed in? <a href="javascript:login('show');">login</a></p>
               </nav>
 
+              
+            
     <div class="container">
         {% block content %}
         {% endblock %}
     </div>
-
+<footer>
     <div class="footer-wrapper">
       <div class="container">
           <div class="row">
               
               <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 mbt">
-                <h2>About BuuPass</h2>
-                <p>Kenya's #1 marketplace for bus, shuttle, and train bookings. Book anytime, anywhere, from any phone using *877# or www.buupass.com</p>
+                <h2>About BreeBus</h2>
+                <p>All you need to know</p>
 
               </div>
               <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
@@ -85,7 +157,7 @@
                 <h2>Contact us</h2>
                 <address class="contact-details">
                     <span class="contact-phone"><i class="soap-icon-phone"></i> 
-                    <a href="#" class="contact-email">0715 763 362</a></span>
+                    <a href="#" class="contact-email">0703 462 665</a></span>
                     <br />
                     <span class="contact-phone"><i class="soap-icon-message"></i> <a href="/cdn-cgi/l/email-protection#a0c9cec6cfe0c2d5d5d0c1d3d38ec3cfcd" class="contact-email"><span class="__cf_email__" data-cfemail="d0b9beb6bf90b2a5a5a0b1a3a3feb3bfbd">[email&#160;protected]</span></a></span>
                 </address>
@@ -96,26 +168,9 @@
           </div>
       </div>
   </div>
-  <div class="bottom gray-area">
-      <div class="container">
-          <div class="logo pull-left">
-              <a href="https://buupass.com/" title="Buupass">
-                  <img src="https://buupass.com/app/themes/bus/assets/images/footer_logo.png" alt="Buupass logo" />
-              </a>
-          </div>
-          <div class="pull-right hidden-mobile">
-              <a id="back-to-top" href="#" class="animated" data-animation-type="bounce"><i class="soap-icon-longarrow-up circle"></i></a>
-          </div>     
-          <div>     
-                  <ul class="social-icons pull-right mt-15 clearfix">
-                      <li class="twitter"><a title="twitter" href="https://twitter.com/BuuPass" target="_blank" data-toggle="tooltip"><i class="soap-icon-twitter"></i></a></li>
-                      <li class="googleplus"><a title="instagram" href="https://www.instagram.com/buupass/"  target="_blank" data-toggle="tooltip"><i class="soap-icon-instagram"></i></a></li>
-                      <li class="facebook"><a title="facebook" href="https://www.facebook.com/BuuPass/"  target="_blank" data-toggle="tooltip"><i class="soap-icon-facebook"></i></a></li>
-                      <li class="linkedin"><a title="linkedin" href="https://www.linkedin.com/company/buupass"  target="_blank" data-toggle="tooltip"><i class="soap-icon-linkedin"></i></a></li>
-                  </ul>
-                </div>
-          <div class="copyright pull-right">
-              <p>&copy; 2019 Buupass.com</p>
+
+          <div class="copyright pull-center">
+              <p>&copy; 2019 BreeBus</p>
           </div>
       </div>
   </div>

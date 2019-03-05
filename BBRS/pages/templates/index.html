@@ -105,8 +105,8 @@
 			</div>
 		</div>
 	</div>
-</header>
-	<script src="{% static 'js/jquery.min.js' %}"></script>
+	
+	<script src="js/jquery.min.js"></script>
 	<script>
 		$('.form-control').each(function () {
 			floatedLabel($(this));
@@ -124,15 +124,9 @@
 				$field.removeClass('input-not-empty');
 			}
 		}
-
-		$('#one-way').change( function () {
-    if ($('#one-way').checked() ) {
-        $('#return').removeClass('disabled');
-    } else {
-        $('#return').addClass('disabled');
-    }
-});
 	</script>
+</header>
+
 
 </body>
 
