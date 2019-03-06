@@ -1,8 +1,16 @@
 {% extends 'base.html' %}
-<!-- {% load static %} -->
+{% load static %}
 {% block title %}About Breackey{% endblock %}
 
 {% block content %}
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+
+<!-- Custom stlylesheet -->
+<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
